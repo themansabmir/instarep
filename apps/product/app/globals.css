@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "@repo/ui/globals.css";
+
+/* Scan the shared UI package for class names (it lives outside this app). */
+@source "../../../packages/ui/src/**/*.{ts,tsx}";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}

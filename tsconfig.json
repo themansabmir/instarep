@@ -1,0 +1,9 @@
+{
+  "//": "Root tsconfig for editor tooling only. Each app/package has its own build config.",
+  "files": [],
+  "references": [
+    { "path": "apps/web" },
+    { "path": "apps/product" },
+    { "path": "packages/ui" }
+  ]
+}

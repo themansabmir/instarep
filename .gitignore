@@ -1,0 +1,38 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# builds
+dist
+build
+.next
+out
+.turbo
+
+# testing
+coverage
+playwright-report
+test-results
+.playwright
+
+# env files
+.env
+.env.local
+.env.*.local
+*.env
+!.env.example
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# os / editor
+.DS_Store
+Thumbs.db
+*.tsbuildinfo
+next-env.d.ts
+
+# vercel
+.vercel
