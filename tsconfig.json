@@ -4,6 +4,7 @@
   "references": [
     { "path": "apps/web" },
     { "path": "apps/product" },
-    { "path": "packages/ui" }
+    { "path": "packages/ui" },
+    { "path": "packages/logger" }
   ]
 }
