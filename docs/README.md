@@ -16,6 +16,7 @@ source of truth for architecture and conventions.
 | [adding-a-feature.md](./adding-a-feature.md)   | Step-by-step playbook for adding a product feature         |
 | [logging-and-errors.md](./logging-and-errors.md) | How to log and handle errors consistently               |
 | [database.md](./database.md)                   | Prisma data-access package (`@repo/db`)                    |
+| [product-backlog.md](./product-backlog.md)     | Product vision, epics & user stories (grounded in schema)  |
 | [seo.md](./seo.md)                             | SEO infrastructure for the marketing site                  |
 
 ## Golden rules (TL;DR)
