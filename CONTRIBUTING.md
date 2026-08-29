@@ -21,6 +21,16 @@ pnpm install
 # 2. Create local env files from the examples
 cp apps/web/.env.example apps/web/.env.local
 cp apps/product/.env.example apps/product/.env.local
+cp packages/database/.env.example packages/database/.env
+```
+
+You need a PostgreSQL database with the **pgvector** extension available. Set
+`DATABASE_URL` in both `apps/product/.env.local` and `packages/database/.env`,
+then generate the client and apply the schema:
+
+```bash
+pnpm --filter @repo/db db:generate   # generate the Prisma client
+pnpm --filter @repo/db db:migrate    # create + apply the initial migration
 ```
 
 On Windows PowerShell, use `Copy-Item apps/web/.env.example apps/web/.env.local` etc.
@@ -66,6 +76,7 @@ packages/
   ui/        Shared shadcn/ui design-system primitives
   config/    Shared ESLint + TypeScript config
   logger/    Shared structured logger
+  database/  Prisma schema + client (@repo/db)
 docs/        Architecture, conventions and AI contributor guidelines
 ```
 

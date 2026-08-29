@@ -10,6 +10,9 @@ build
 out
 .turbo
 
+# prisma generated client
+packages/database/src/generated
+
 # testing
 coverage
 playwright-report

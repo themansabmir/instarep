@@ -1,1 +1,16 @@
-pnpm exec lint-staged
+# Format/lint staged files before committing.
+#
+# Husky runs this hook with `sh -e`, so we must guard the command with `||` to
+# inspect its exit code. If the local toolchain cannot even start lint-staged
+# (exit code 127 — e.g. a broken global `node`/`pnpm` shim on Windows/Git Bash)
+# we skip rather than block the commit. Genuine lint/format failures (any other
+# non-zero code) still block the commit.
+pnpm exec lint-staged || {
+  code=$?
+  if [ "$code" -eq 127 ]; then
+    echo "husky: lint-staged could not start (exit 127) — skipping pre-commit checks."
+    echo "       Fix your Node/pnpm setup to re-enable them (see CONTRIBUTING.md)."
+    exit 0
+  fi
+  exit "$code"
+}

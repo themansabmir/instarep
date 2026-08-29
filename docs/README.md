@@ -15,6 +15,7 @@ source of truth for architecture and conventions.
 | [conventions.md](./conventions.md)             | Coding standards, naming, imports, component levels        |
 | [adding-a-feature.md](./adding-a-feature.md)   | Step-by-step playbook for adding a product feature         |
 | [logging-and-errors.md](./logging-and-errors.md) | How to log and handle errors consistently               |
+| [database.md](./database.md)                   | Prisma data-access package (`@repo/db`)                    |
 | [seo.md](./seo.md)                             | SEO infrastructure for the marketing site                  |
 
 ## Golden rules (TL;DR)

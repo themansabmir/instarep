@@ -21,6 +21,8 @@ apps/
 packages/
   ui/         Shared design-system primitives (shadcn/ui)
   config/     Shared ESLint + TypeScript configuration
+  logger/     Shared structured logger
+  database/   Prisma schema + client (@repo/db)
 ```
 
 Apps are independent and never import each other's source. Anything shared is

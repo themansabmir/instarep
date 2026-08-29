@@ -5,6 +5,7 @@
     { "path": "apps/web" },
     { "path": "apps/product" },
     { "path": "packages/ui" },
-    { "path": "packages/logger" }
+    { "path": "packages/logger" },
+    { "path": "packages/database" }
   ]
 }
