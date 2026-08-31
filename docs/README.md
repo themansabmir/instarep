@@ -9,14 +9,18 @@ source of truth for architecture and conventions.
 
 ## Index
 
-| Document                                       | Purpose                                                    |
-| ---------------------------------------------- | ---------------------------------------------------------- |
-| [architecture.md](./architecture.md)           | Monorepo layout, boundaries, Clean/Hexagonal architecture  |
-| [conventions.md](./conventions.md)             | Coding standards, naming, imports, component levels        |
-| [adding-a-feature.md](./adding-a-feature.md)   | Step-by-step playbook for adding a product feature         |
-| [logging-and-errors.md](./logging-and-errors.md) | How to log and handle errors consistently               |
-| [database.md](./database.md)                   | Prisma data-access package (`@repo/db`)                    |
-| [seo.md](./seo.md)                             | SEO infrastructure for the marketing site                  |
+| Document                                         | Purpose                                                         |
+| ------------------------------------------------ | --------------------------------------------------------------- |
+| [architecture.md](./architecture.md)             | Monorepo layout, boundaries, Clean/Hexagonal architecture       |
+| [design-system.md](./design-system.md)           | Global tokens, `@repo/ui` primitives, `/design-system` showcase |
+| [epic-1-onboarding.md](./epic-1-onboarding.md)   | Sprint 1: auth, workspace, Instagram OAuth, webhooks            |
+| [local-development.md](./local-development.md)   | Env, database push, email options for MVP                       |
+| [instagram-setup.md](./instagram-setup.md)       | Meta developer app configuration                                |
+| [conventions.md](./conventions.md)               | Coding standards, naming, imports, component levels             |
+| [adding-a-feature.md](./adding-a-feature.md)     | Step-by-step playbook for adding a product feature              |
+| [logging-and-errors.md](./logging-and-errors.md) | How to log and handle errors consistently                       |
+| [database.md](./database.md)                     | Prisma data-access package (`@repo/db`)                         |
+| [seo.md](./seo.md)                               | SEO infrastructure for the marketing site                       |
 
 ## Golden rules (TL;DR)
 

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { CreditCard, LayoutDashboard, Megaphone, Settings } from "lucide-react";
+import { CreditCard, Instagram, LayoutDashboard, Megaphone, Settings } from "lucide-react";
 
 import { cn } from "@repo/ui/lib/utils";
 
@@ -11,6 +11,7 @@ const navItems = [
   { title: "Campaigns", href: "/campaigns", icon: Megaphone },
   { title: "Billing", href: "/billing", icon: CreditCard },
   { title: "Settings", href: "/settings", icon: Settings },
+  { title: "Instagram", href: "/settings/instagram", icon: Instagram },
 ];
 
 export function AppSidebar() {
@@ -19,8 +20,8 @@ export function AppSidebar() {
   return (
     <aside className="hidden w-60 shrink-0 border-r md:block">
       <div className="flex h-16 items-center gap-2 border-b px-6 font-semibold">
-        <span className="inline-block size-6 rounded-md bg-primary" aria-hidden />
-        Instarep
+        <span className="bg-gradient-instagram inline-block size-6 rounded-md" aria-hidden />
+        Instabot
       </div>
       <nav className="space-y-1 p-3" aria-label="Primary">
         {navItems.map((item) => {

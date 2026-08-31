@@ -38,7 +38,7 @@ shared packages:
 7. **Validated env only.** Access env through `lib/env.ts` (never
    `process.env` directly in app code). Secrets are server-only; browser values
    must be `NEXT_PUBLIC_*`.
-7b. **Database access is boundaried.** Import the Prisma client (`@repo/db` /
+   7b. **Database access is boundaried.** Import the Prisma client (`@repo/db` /
    `@/lib/db`) only from a feature's `infrastructure/` layer — never from
    `domain/` or `presentation/`.
 8. **Strict quality gates.** Code must pass `pnpm lint`, `pnpm typecheck`,
@@ -54,12 +54,13 @@ pnpm lint && pnpm typecheck && pnpm test && pnpm build
 
 ## Where to look
 
-| Topic                            | Read                                        |
-| -------------------------------- | ------------------------------------------- |
-| Architecture & dependency rules  | `docs/architecture.md`                      |
-| Coding conventions               | `docs/conventions.md`                       |
-| Adding a feature (step by step)  | `docs/adding-a-feature.md`                  |
-| Logging & error handling         | `docs/logging-and-errors.md`                |
-| Database (Prisma / `@repo/db`)   | `docs/database.md`                          |
-| SEO (marketing site)             | `docs/seo.md`                               |
-| Local setup & commands           | `CONTRIBUTING.md`                           |
+| Topic                           | Read                         |
+| ------------------------------- | ---------------------------- |
+| Architecture & dependency rules | `docs/architecture.md`       |
+| Design system (`@repo/ui`)      | `docs/design-system.md`      |
+| Coding conventions              | `docs/conventions.md`        |
+| Adding a feature (step by step) | `docs/adding-a-feature.md`   |
+| Logging & error handling        | `docs/logging-and-errors.md` |
+| Database (Prisma / `@repo/db`)  | `docs/database.md`           |
+| SEO (marketing site)            | `docs/seo.md`                |
+| Local setup & commands          | `CONTRIBUTING.md`            |

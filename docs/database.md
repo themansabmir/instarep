@@ -27,7 +27,7 @@ packages/database/
 Import the client only from **infrastructure / adapters** (never domain):
 
 ```ts
-import { db } from "@repo/db";           // or: import { db } from "@/lib/db"
+import { db } from "@repo/db"; // or: import { db } from "@/lib/db"
 
 const workspaces = await db.workspace.findMany();
 ```
@@ -37,12 +37,17 @@ Types (including `Prisma`, model types and enums) are re-exported from
 
 ## Environment
 
-Prisma reads `DATABASE_URL` from `packages/database/.env` (for CLI commands) and
-the product app validates it via `apps/product/lib/env.ts`.
+`DATABASE_URL` is defined in **`apps/product/.env`** (single source for the product
+app and Prisma CLI). Database scripts load that file automatically via
+`dotenv-cli`; you can override locally with `packages/database/.env` if needed.
 
 ```bash
-cp packages/database/.env.example packages/database/.env
+# apps/product/.env (required)
+DATABASE_URL="postgresql://postgres:YOUR_PASSWORD@localhost:5432/instarep?schema=public"
 ```
+
+Optional: copy `packages/database/.env.example` to `packages/database/.env` only
+if you want database-only overrides without touching the product app env.
 
 The database must have pgvector available. With the extension declared in the
 schema, `prisma migrate` will run `CREATE EXTENSION IF NOT EXISTS vector`.

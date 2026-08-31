@@ -1,10 +1,18 @@
 import { UserMenu } from "@/components/user-menu";
 
-export function DashboardHeader() {
+interface DashboardHeaderProps {
+  user: {
+    name?: string | null;
+    email: string;
+  };
+  workspaceName?: string;
+}
+
+export function DashboardHeader({ user, workspaceName }: DashboardHeaderProps) {
   return (
     <header className="flex h-16 items-center justify-between border-b px-6">
-      <div className="text-sm text-muted-foreground">Workspace</div>
-      <UserMenu />
+      <div className="text-muted-foreground text-sm">{workspaceName ?? "Workspace"}</div>
+      <UserMenu user={user} />
     </header>
   );
 }

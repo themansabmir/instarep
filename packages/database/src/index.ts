@@ -1,3 +1,4 @@
+import "./prisma-env";
 import { PrismaClient } from "./generated/client";
 
 /**
